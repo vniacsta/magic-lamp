@@ -14,7 +14,7 @@ public class Genie {
     // method to grant wish common to all subclasses
     public void grantWish() {
 
-        System.out.println("** Granting wishes **");
+        System.out.println("\n **** Granting wishes ****");
 
         // if number max of wishes is inferior to
         if (!hasWishesToGrant()) {
@@ -24,6 +24,7 @@ public class Genie {
         // if there are still wishes print and increment
         System.out.println(this + " has granted your wish!");
         wishesGranted++;
+
     }
 
     // extract this logic from grantWish to override just this condition on other classes

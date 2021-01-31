@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         // create a magic lamp with a max number of genies
-        MagicLamp myLamp = new MagicLamp(4);
+        MagicLamp goldLamp = new MagicLamp(4);
 
         // actions to run my program
         // creating an array of genies with 5 positions
@@ -16,21 +16,32 @@ public class Main {
         // iterate through my genies for each of them to rub the lamp
         // it return a type of genie and populated my genie array with 5 genies
         for (int i = 0; i < genies.length; i++) {
-            genies[i] = myLamp.rubLamp();
+            genies[i] = goldLamp.rubLamp();
         }
 
         // and then my genies will grant me 2 wishes, one at a time
         for (Genie genie : genies) {
-            genie.grantWish();
+            System.out.println("\n **** Rubbing Lamp ****");
             genie.grantWish();
             genie.grantWish();
             genie.grantWish();
         }
 
-        System.out.println("** Rechargind a lamp with a demon **");
+        System.out.println("\n **** Recharging a lamp with a demon ****");
 
-        myLamp.rechargeLamp(genies[4]);
-        myLamp.rechargeLamp(genies[2]); // cannot work - it's not a demon type
+        goldLamp.rechargeLamp(genies[4]);
+        goldLamp.rechargeLamp(genies[4]);
 
+
+        System.out.println("\n **** Creating a new lamp ****");
+
+        //creating a new lamp
+        MagicLamp foreverLamp = new MagicLamp(5);
+
+        System.out.println("\n **** Comparing lamps ****");
+
+        // comparing magic lamps
+        System.out.println("Are both lams the same? " +
+                foreverLamp.compareLamps(goldLamp) + "!");
     }
 }

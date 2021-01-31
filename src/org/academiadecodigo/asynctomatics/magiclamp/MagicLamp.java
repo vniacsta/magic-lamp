@@ -23,7 +23,6 @@ public class MagicLamp {
     // method to release a new genie every time it is rubbed
     public Genie rubLamp() {
 
-        System.out.println(" ** Rubbing Lamp **");
         // counter to check odd or even number
         countRubs++;
         // decrease the number of genies every time goes through this loop
@@ -69,5 +68,12 @@ public class MagicLamp {
         // rest the counter
         countRubs = 0;
         System.out.println("The magic lamp is recharged by a " + demon);
+    }
+
+    // comparing magic lamps
+    public boolean compareLamps(MagicLamp lamp) {
+        return (this.maxNumGenies == lamp.maxNumGenies &&
+                this.countRubs == lamp.countRubs &&
+                this.countRecharge == lamp.countRecharge);
     }
 }
